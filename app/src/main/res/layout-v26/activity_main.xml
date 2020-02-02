@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     xmlns:tools="http://schemas.android.com/tools"
+                                                     android:orientation="vertical"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent"
+                                                     >
+
+
+    <com.twilio.video.VideoView
+            android:id="@+id/receiveVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+    <com.google.ar.sceneform.ArSceneView
+            android:id="@+id/arSceneView"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"/>
+
+    <ProgressBar
+            android:id="@+id/reconnectingProgressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ibEndCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_cancel_call"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="60dp"
+    />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="40dp"
+                    android:layout_gravity="bottom">
+        <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ibInviteFriend"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:background="@mipmap/ic_add_friend"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ibVideoCall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:background="@mipmap/ic_video_call"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ibMic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp"
+                android:background="@mipmap/ic_mic"/>
+
+    </RelativeLayout>
+    <LinearLayout
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="10dp"
+            android:gravity="top" android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/videoStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="room_status"
+                android:textColor="#F3F3F3"
+                android:visibility="gone"
+                android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/llFloating"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="end">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/muteActionFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/d_mute"
+                android:tint="@color/colorBlack"
+                android:theme="@style/floatingButton"
+                app:fabSize="normal"/>
+
+        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/connectActionFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/d_change"
+                android:tint="@color/colorBlack"
+                android:theme="@style/floatingButton"
+                app:fabSize="normal"/>-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/changeShape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:src="@mipmap/d_play"
+                android:tint="@color/colorBlack"
+                android:theme="@style/floatingButton"
+                app:fabSize="normal"/>
+
+        <LinearLayout
+                android:id="@+id/llRecordOption"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/floating_bg"
+                android:visibility="invisible"
+                android:layout_gravity="center">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/stopFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+
+                    android:tint="@color/colorBlack"
+                    android:tooltipText="Create Room"
+                    android:theme="@style/floatingButton"
+                    app:fabSize="normal"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/pauseFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_pause"
+                    android:tint="@color/colorBlack"
+                    android:tooltipText="Create Room"
+                    android:theme="@style/floatingButton"
+                    app:fabSize="normal"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

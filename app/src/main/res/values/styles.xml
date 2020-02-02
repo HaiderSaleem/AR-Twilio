@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="floatingButton">
+        <item name="colorPrimary">@color/colorWhiteOP</item>
+        <item name="colorPrimaryDark">@color/colorWhiteOP</item>
+        <item name="colorAccent">@color/colorWhiteOP</item>
+    </style>
+
+    <style name="floatingHorizontalButton">
+        <item name="colorPrimary">@color/colorWhiteOPA</item>
+        <item name="colorPrimaryDark">@color/colorWhiteOPA</item>
+        <item name="colorAccent">@color/colorWhiteOPA</item>
+    </style>
+</resources>

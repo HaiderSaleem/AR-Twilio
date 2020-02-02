@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AR-Twilio</string>
+    <string name="room_status">room_status</string>
+</resources>
